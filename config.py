@@ -1,122 +1,125 @@
 import json
+import os
 from pathlib import Path
 
 with open('data/rpc.json') as file:
-    RPC = json.load(file)
+  RPC = json.load(file)
 
 with open('data/abi/erc20_abi.json') as file:
-    ERC20_ABI = json.load(file)
+  ERC20_ABI = json.load(file)
 
-with open("accounts.txt", "r") as file:
-    ACCOUNTS = [row.strip() for row in file]
+# with open("accounts.txt", "r") as file:
+#     ACCOUNTS = [row.strip() for row in file]
+
+ACCOUNTS = os.environ['ACCOUNTS'].split(',')
 
 with open("proxy.txt", "r") as file:
-    PROXIES = [row.strip() for row in file]
+  PROXIES = [row.strip() for row in file]
 
 with open('data/abi/zksync/deposit.json') as file:
-    ZKSYNC_DEPOSIT_ABI = json.load(file)
+  ZKSYNC_DEPOSIT_ABI = json.load(file)
 
 with open('data/abi/zksync/withdraw.json') as file:
-    ZKSYNC_WITHDRAW_ABI = json.load(file)
+  ZKSYNC_WITHDRAW_ABI = json.load(file)
 
 with open('data/abi/zksync/weth.json') as file:
-    WETH_ABI = json.load(file)
+  WETH_ABI = json.load(file)
 
 with open("data/abi/syncswap/router.json", "r") as file:
-    SYNCSWAP_ROUTER_ABI = json.load(file)
+  SYNCSWAP_ROUTER_ABI = json.load(file)
 
 with open('data/abi/syncswap/classic_pool.json') as file:
-    SYNCSWAP_CLASSIC_POOL_ABI = json.load(file)
+  SYNCSWAP_CLASSIC_POOL_ABI = json.load(file)
 
 with open('data/abi/syncswap/classic_pool_data.json') as file:
-    SYNCSWAP_CLASSIC_POOL_DATA_ABI = json.load(file)
+  SYNCSWAP_CLASSIC_POOL_DATA_ABI = json.load(file)
 
 with open("data/abi/mute/router.json", "r") as file:
-    MUTE_ROUTER_ABI = json.load(file)
+  MUTE_ROUTER_ABI = json.load(file)
 
 with open("data/abi/spacefi/router.json", "r") as file:
-    SPACEFI_ROUTER_ABI = json.load(file)
+  SPACEFI_ROUTER_ABI = json.load(file)
 
 with open("data/abi/pancake/router.json", "r") as file:
-    PANCAKE_ROUTER_ABI = json.load(file)
+  PANCAKE_ROUTER_ABI = json.load(file)
 
 with open("data/abi/pancake/factory.json", "r") as file:
-    PANCAKE_FACTORY_ABI = json.load(file)
+  PANCAKE_FACTORY_ABI = json.load(file)
 
 with open("data/abi/pancake/quoter.json", "r") as file:
-    PANCAKE_QUOTER_ABI = json.load(file)
+  PANCAKE_QUOTER_ABI = json.load(file)
 
 with open("data/abi/woofi/router.json", "r") as file:
-    WOOFI_ROUTER_ABI = json.load(file)
+  WOOFI_ROUTER_ABI = json.load(file)
 
 with open("data/abi/zkswap/router.json", "r") as file:
-    ZKSWAP_ROUTER_ABI = json.load(file)
+  ZKSWAP_ROUTER_ABI = json.load(file)
 
 with open("data/abi/maverick/position.json", "r") as file:
-    MAVERICK_POSITION_ABI = json.load(file)
+  MAVERICK_POSITION_ABI = json.load(file)
 
 with open("data/abi/maverick/router.json", "r") as file:
-    MAVERICK_ROUTER_ABI = json.load(file)
+  MAVERICK_ROUTER_ABI = json.load(file)
 
 with open("data/abi/vesync/router.json", "r") as file:
-    VESYNC_ROUTER_ABI = json.load(file)
+  VESYNC_ROUTER_ABI = json.load(file)
 
 with open("data/abi/bungee/abi.json", "r") as file:
-    BUNGEE_ABI = json.load(file)
+  BUNGEE_ABI = json.load(file)
 
 with open("data/abi/stargate/router.json", "r") as file:
-    STARGATE_ABI = json.load(file)
+  STARGATE_ABI = json.load(file)
 
 with open("data/abi/eralend/abi.json", "r") as file:
-    ERALEND_ABI = json.load(file)
+  ERALEND_ABI = json.load(file)
 
 with open("data/abi/basilisk/abi.json", "r") as file:
-    BASILISK_ABI = json.load(file)
+  BASILISK_ABI = json.load(file)
 
 with open("data/abi/reactorfusion/abi.json", "r") as file:
-    REACTORFUSION_ABI = json.load(file)
+  REACTORFUSION_ABI = json.load(file)
 
 with open("data/abi/zerolend/abi.json", "r") as file:
-    ZEROLEND_ABI = json.load(file)
+  ZEROLEND_ABI = json.load(file)
 
 with open("data/abi/dmail/abi.json", "r") as file:
-    DMAIL_ABI = json.load(file)
+  DMAIL_ABI = json.load(file)
 
 with open("data/abi/l2telegraph/send_message.json", "r") as file:
-    L2TELEGRAPH_MESSAGE_ABI = json.load(file)
+  L2TELEGRAPH_MESSAGE_ABI = json.load(file)
 
 with open("data/abi/l2telegraph/bridge_nft.json", "r") as file:
-    L2TELEGRAPH_NFT_ABI = json.load(file)
+  L2TELEGRAPH_NFT_ABI = json.load(file)
 
 with open("data/abi/nft2me/abi.json", "r") as file:
-    MINTER_ABI = json.load(file)
+  MINTER_ABI = json.load(file)
 
 with open("data/abi/mailzero/abi.json", "r") as file:
-    MAILZERO_ABI = json.load(file)
+  MAILZERO_ABI = json.load(file)
 
 with open("data/abi/tavaera/id.json", "r") as file:
-    TAVAERA_ID_ABI = json.load(file)
+  TAVAERA_ID_ABI = json.load(file)
 
 with open("data/abi/tavaera/abi.json", "r") as file:
-    TAVAERA_ABI = json.load(file)
+  TAVAERA_ABI = json.load(file)
 
 with open("data/abi/zks/abi.json", "r") as file:
-    ZKS_ABI = json.load(file)
+  ZKS_ABI = json.load(file)
 
 with open("data/abi/era_ns/abi.json", "r") as file:
-    ENS_ABI = json.load(file)
+  ENS_ABI = json.load(file)
 
 with open("data/abi/omnisea/abi.json", "r") as file:
-    OMNISEA_ABI = json.load(file)
+  OMNISEA_ABI = json.load(file)
 
 with open("data/abi/gnosis/abi.json", "r") as file:
-    SAFE_ABI = json.load(file)
+  SAFE_ABI = json.load(file)
 
 with open("data/abi/zkstars/abi.json", "r") as file:
-    ZKSTARS_ABI = json.load(file)
+  ZKSTARS_ABI = json.load(file)
 
 with open("data/abi/rocketsam/abi.json", "r") as file:
-    ROCKETSAM_ABI = json.load(file)
+  ROCKETSAM_ABI = json.load(file)
 
 ZKSYNC_BRIDGE_CONTRACT = "0x32400084c286cf3e17e7b677ea9583e60a000324"
 
@@ -143,13 +146,9 @@ SYNCSWAP_CONTRACTS = {
     "classic_pool": "0xf2DAd89f2788a8CD54625C60b55cD3d2D0ACa7Cb"
 }
 
-MUTE_CONTRACTS = {
-    "router": "0x8B791913eB07C32779a16750e3868aA8495F5964"
-}
+MUTE_CONTRACTS = {"router": "0x8B791913eB07C32779a16750e3868aA8495F5964"}
 
-SPACEFI_CONTRACTS = {
-    "router": "0xbE7D1FD1f6748bbDefC4fbaCafBb11C6Fc506d1d"
-}
+SPACEFI_CONTRACTS = {"router": "0xbE7D1FD1f6748bbDefC4fbaCafBb11C6Fc506d1d"}
 
 PANCAKE_CONTRACTS = {
     "router": "0xf8b59f3c3Ab33200ec80a8A58b2aA5F5D2a8944C",
@@ -157,26 +156,25 @@ PANCAKE_CONTRACTS = {
     "quoter": "0x3d146FcE6c1006857750cBe8aF44f76a28041CCc"
 }
 
-WOOFI_CONTRACTS = {
-    "router": "0xfd505702b37Ae9b626952Eb2DD736d9045876417"
-}
+WOOFI_CONTRACTS = {"router": "0xfd505702b37Ae9b626952Eb2DD736d9045876417"}
 
 ODOS_CONTRACT = {
     "router": "0x4bba932e9792a2b917d47830c93a9bc79320e4f7",
-    "use_ref": True  # If you use True, you support me 1% of the transaction amount
+    "use_ref":
+    True  # If you use True, you support me 1% of the transaction amount
 }
 
-ZKSWAP_CONTRACTS = {
-    "router": "0x18381c0f738146Fb694DE18D1106BdE2BE040Fa4"
-}
+ZKSWAP_CONTRACTS = {"router": "0x18381c0f738146Fb694DE18D1106BdE2BE040Fa4"}
 
 XYSWAP_CONTRACT = {
     "router": "0x30E63157bD0bA74C814B786F6eA2ed9549507b46",
-    "use_ref": True  # If you use True, you support me 1% of the transaction amount
+    "use_ref":
+    True  # If you use True, you support me 1% of the transaction amount
 }
 OPENOCEAN_CONTRACT = {
     "router": "0x36A1aCbbCAfca2468b85011DDD16E7Cb4d673230",
-    "use_ref": True  # If you use True, you support me 1% of the transaction amount
+    "use_ref":
+    True  # If you use True, you support me 1% of the transaction amount
 }
 
 INCH_CONTRACT = {
@@ -190,9 +188,7 @@ MAVERICK_CONTRACTS = {
     "pool_information": "0x57D47F505EdaA8Ae1eFD807A860A79A28bE06449",
 }
 
-VESYNC_CONTRACTS = {
-    "router": "0x6C31035D62541ceba2Ac587ea09891d1645D6D07"
-}
+VESYNC_CONTRACTS = {"router": "0x6C31035D62541ceba2Ac587ea09891d1645D6D07"}
 
 BUNGEE_CONTRACT = "0x7ee459d7fde8b4a3c22b9c8c7aa52abaddd9ffd5"
 
